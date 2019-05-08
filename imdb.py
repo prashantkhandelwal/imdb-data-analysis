@@ -38,10 +38,12 @@ print('-'*200)
 
 ################################################################################################
 
-# Getting the list of total number of adult movies using DF
+################################# Miscellaneous Statistics######################################
 
 print('-'*200)
-print(' '*60 + 'Total Number of Adult Movies irrespective of the Genre\n')
+print(' '*80 + 'Miscellaneous Statistics\n')
+
+# Getting the list of total number of adult movies using DF
 
 # Below is a way to set conditions in 'df'.
 # You can have as many conditions as you want to filter the data.
@@ -62,11 +64,19 @@ adult_movies = df[only_movies & is_adult]
 # The output of the below command will look something like this
 # isAdult    8594
 
-print(adult_movies[['isAdult']].count())
+# print(adult_movies[['isAdult']].count())
+
+print('Total number of adult movies: '+ str(adult_movies[['isAdult']].count().values) + '\n')
 
 # Use the below statement if you want to see the entire dataframe
 # print(adult_movies.count())
 
-################################################################################################
+# Movies in a given year
 
+movies_in_year = df[(df['titleType'] == 'movie') & (df['startYear'] == 2018)]
+print('Total movies in the year 2018: '+ str(movies_in_year[['tconst']].count().values) + '\n')
+
+print('-'*200)
+
+################################################################################################
 
