@@ -28,7 +28,7 @@ print('-'*200)
 
 ################################################################################################
 
-# Display total number of titles
+# Display total number of 'titleTypes'
 
 print('-'*200)
 print(' '*80 + 'Total Number of Title Types\n')
